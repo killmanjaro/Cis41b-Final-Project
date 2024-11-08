@@ -38,25 +38,4 @@ main_gui.py : requests(Web Access), database(Data Storage), tkiner(GUI)
 
 
 
-FOR CLARE:
------------------------------------------------------
-Dummy Account Login Info
 
-EMAIL: testingdummy41b@yahoo.com  Yahoo Password: spotifinal123$
-Spotify Password: spotifinal123
-
-
-How to use the app:
-Open and run main_gui.py. 
-It will open a web browser page for you to log into the Spotify account. 
-Our server listening for an authorization response times out after a minute. 
-
-BACKUP IN CASE YOU CAN'T MAKE REQUESTS:
-If, for whatever reason, the login doesn't work and says that you're not authorized/registered, I've preregistered a new app at https://developer.spotify.com/dashboard on the given account
-If not already, go to the dashboard at developer.spotify.com, select the app, at the top right are the settings, click that and the first thing you'll see is the client id. You can also unhide the client secret right below it.
-In our module authRequest.py, our CLIENT_ID and CLIENT_SECRET are attributes of the SpOauth class. Replace our client id and secret with the one from the app in your dashboard.
-I set the callback/redirect-URI in the app's registration to be the same as the one we're using (the one already in the authRequest.py). 
-If the socket server isn't receiving anything after you log in, there's a slim chance you may also have to add a new redirect-uri. In the app's settings, you can go down, press edit, and change the redirect-URI. 
-The most you'll have to change is the Port number. If you do have to change the redirect-uri in the dashboard, change the REDIRECT_URI class attribute, and the PORT in the authCodeCallback method. 
-
-You should be set.
